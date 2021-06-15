@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:orientation="vertical"
+    tools:context="userlayer.fragments.SortingandFiltering"
+    android:background="@color/colorGreyBackground">
+
+    <LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/UI_AddNewEntry_Layout_PaymentMethodSection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <userlayer.tools.AutoResizeTextView
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:gravity="right|center_vertical"
+            android:singleLine="true"
+            android:text=" Select Payment:"
+            android:textSize="22sp" />
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            />
+        <LinearLayout
+            android:id="@+id/UI_AddNewEntry_Layout_PaymentMethodButton"
+            android:layout_width="0dp"
+            android:layout_weight="55"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:clickable="true">
+            <ImageView
+                android:id="@+id/UI_AddNewEntry_Image_PaymentMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_cash"
+                />
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:id="@+id/UI_AddNewEntry_Text_PaymentMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Cash"
+                android:textColor="@color/colorTextMain"
+                android:singleLine ="true"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:drawableRight="@drawable/icon_expand"
+            android:id="@+id/UI_AddNewEntry_Text_PaymentMethodButtonSpinnerIcon"
+            android:clickable="true"
+            />
+        <Spinner
+            android:id="@+id/UI_AddNewEntry_Spinner_PaymentMethodSpinner"
+            android:layout_width="0dp"
+            android:layout_weight="0"
+            android:layout_height="match_parent"
+            android:dropDownWidth="wrap_content"
+
+            />
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

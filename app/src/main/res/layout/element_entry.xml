@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70sp"
+    android:weightSum="100"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="@drawable/button_white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="90">
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="35"
+            android:weightSum="100"
+            android:layout_height="match_parent">
+            <userlayer.tools.AutoResizeTextView
+                android:id="@+id/UI_ElementEntry_Text_Date"
+                android:layout_width="match_parent"
+                android:layout_weight="35"
+                android:layout_height="0dp"
+                android:text="Thursday, 02.05.2019"
+
+                android:textSize="12sp"
+                android:textColor="@color/colorTextMain"
+                android:gravity="bottom"
+                />
+            <userlayer.tools.AutoResizeTextView
+                android:id="@+id/UI_ElementEntry_Text_Title"
+                android:layout_width="match_parent"
+                android:layout_weight="60"
+                android:layout_height="0dp"
+                android:maxLines="2"
+                android:text="Weekly groceries"
+                android:textSize="14sp"
+                android:textColor="@color/colorTextMain"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="100">
+            <userlayer.tools.AutoResizeTextView
+                android:id="@+id/UI_ElementEntry_Text_Category"
+                android:layout_width="match_parent"
+                android:layout_weight="45"
+                android:layout_height="0dp"
+                android:text="Food"
+                android:textSize="14sp"
+                android:singleLine ="true"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/icon_food"
+                android:scaleY="0.8"
+                android:scaleX="0.8"
+                android:textColor="@color/colorTextMain"
+                android:drawablePadding="5dp"
+                />
+            <userlayer.tools.AutoResizeTextView
+                android:id="@+id/UI_ElementEntry_Text_PaymentMethod"
+                android:layout_width="match_parent"
+                android:layout_weight="55"
+                android:layout_height="0dp"
+                android:text="Credit card"
+                android:textSize="14sp"
+                android:singleLine ="true"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/icon_creditcard"
+                android:scaleY="0.8"
+                android:scaleX="0.8"
+                android:textColor="@color/colorTextMain"
+                android:drawablePadding="5dp"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="28"
+            android:layout_height="match_parent">
+            <userlayer.tools.AutoResizeTextView
+                android:id="@+id/UI_ElementEntry_Text_Amount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="- 17.53 €"
+                android:textSize="20sp"
+                android:singleLine ="true"
+                android:gravity="right|center_vertical"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextRed"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

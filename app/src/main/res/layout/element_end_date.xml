@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/UI_AddNewEntry_Layout_EndDate"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="10"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        android:gravity="right|center_vertical"
+        android:text="End Date:"
+        android:textSize="22sp"
+    />
+
+    <android.support.v4.widget.Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+    />
+
+    <TextView
+        android:id="@+id/UI_AddNewEntry_Text_EndDate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="60"
+        android:clickable="true"
+        android:drawableRight="@drawable/icon_expand"
+        android:focusable="false"
+        android:gravity="center_horizontal|center_vertical"
+        android:inputType="textNoSuggestions"
+        android:text="Sat, 11.05.2019"
+        android:textColor="@color/colorTextMain"
+        android:textSize="20sp"
+    />
+</LinearLayout>

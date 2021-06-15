@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:orientation="vertical"
+    tools:context="userlayer.fragments.FragmentAddNewEntry"
+    android:background="@color/colorGreyBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <userlayer.tools.AutoResizeTextView
+            android:id="@+id/UI_AddNewEntry_Type_Type"
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:textSize="16sp"
+            android:singleLine ="true"
+            android:layout_height="match_parent"
+            android:text="Expense"
+            android:background="@drawable/button_red"
+            style="?android:attr/borderlessButtonStyle"
+        />
+        <ImageView
+            android:id="@+id/UI_AddNewEntry_Button_Recurring"
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_beige"
+            style="?android:attr/borderlessButtonStyle"
+            android:src = "@drawable/icon_recurring"
+            android:tint="@color/colorTextGrey"
+            android:padding="35px"
+            />
+        <userlayer.tools.AutoResizeTextView
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="match_parent"
+            android:singleLine ="true"
+            android:textSize="22sp"
+            android:gravity="right|center_vertical"
+            android:text="Amount:"
+        />
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+        />
+
+        <EditText
+            android:id="@+id/UI_AddNewEntry_EditText_Amount"
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:textSize="22sp"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:inputType="numberDecimal"
+            android:textColor="@color/colorTextMain"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <userlayer.tools.AutoResizeTextView
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:textSize="22sp"
+            android:singleLine ="true"
+            android:gravity="right|center_vertical"
+            android:text="Title:"
+        />
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+        />
+        <EditText
+            android:id="@+id/UI_AddNewEntry_EditText_Title"
+            android:layout_width="0dp"
+            android:layout_weight="60"
+            android:textSize="22sp"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:inputType="text"
+            android:textColor="@color/colorTextMain"
+            android:maxLength="30"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <userlayer.tools.AutoResizeTextView
+            android:id="@+id/UI_AddNewEntry_Text_DateInfo"
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:textSize="22sp"
+            android:singleLine ="true"
+            android:gravity="right|center_vertical"
+            android:text="Date:"
+        />
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            />
+        <userlayer.tools.AutoResizeTextView
+            android:id="@+id/UI_AddNewEntry_Text_Date"
+            android:layout_width="0dp"
+            android:layout_weight="60"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:singleLine ="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Sat, 11.05.2019"
+            android:focusable="false"
+            android:clickable="true"
+            android:drawableRight="@drawable/icon_expand"
+            android:textColor="@color/colorTextMain"
+            android:inputType="textNoSuggestions"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/UI_AddNewEntry_Layout_Interval"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <userlayer.tools.AutoResizeTextView
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:textSize="22sp"
+            android:singleLine ="true"
+            android:gravity="right|center_vertical"
+            android:text="Interval:"
+            />
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            />
+        <userlayer.tools.AutoResizeTextView
+            android:id="@+id/UI_AddNewEntry_Text_Interval"
+            android:layout_width="0dp"
+            android:layout_weight="60"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:singleLine ="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="2 Months"
+            android:focusable="false"
+            android:clickable="true"
+            android:drawableRight="@drawable/icon_expand"
+            android:textColor="@color/colorTextMain"
+            android:inputType="textNoSuggestions"
+        />
+        <Spinner
+            android:id="@+id/UI_AddNewEntry_Spinner_IntervalSpinner"
+            android:layout_width="0dp"
+            android:layout_weight="0"
+            android:layout_height="match_parent"
+            android:dropDownWidth="wrap_content"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/UI_AddNewEntry_Layout_EndDate"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <userlayer.tools.AutoResizeTextView
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:textSize="22sp"
+            android:singleLine ="true"
+            android:gravity="right|center_vertical"
+            android:text="End Date:"
+            />
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            />
+        <userlayer.tools.AutoResizeTextView
+            android:id="@+id/UI_AddNewEntry_Text_EndDate"
+            android:layout_width="0dp"
+            android:layout_weight="60"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:singleLine ="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="None"
+            android:focusable="false"
+            android:clickable="true"
+            android:drawableRight="@drawable/icon_expand"
+            android:textColor="@color/colorTextMain"
+            android:inputType="textNoSuggestions"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:weightSum="100"
+        android:orientation="horizontal">
+        <userlayer.tools.AutoResizeTextView
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:textSize="22sp"
+            android:singleLine ="true"
+            android:gravity="right|center_vertical"
+            android:text="Category:"
+        />
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+        />
+
+        <LinearLayout
+            android:id="@+id/UI_AddNewEntry_Layout_CategoryButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="55"
+            android:clickable="true"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/UI_AddNewEntry_Image_CategoryIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_leisure" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/UI_AddNewEntry_Text_Category"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Leisure"
+                android:textColor="@color/colorTextMain"
+                android:singleLine ="true"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:drawableRight="@drawable/icon_expand"
+            android:id="@+id/UI_AddNewEntry_Text_CategoryButtonSpinnerIcon"
+            android:clickable="true"
+        />
+        <Spinner
+            android:id="@+id/UI_AddNewEntry_Spinner_CategorySpinner"
+            android:layout_width="0dp"
+            android:layout_weight="0"
+            android:layout_height="match_parent"
+            android:dropDownWidth="wrap_content"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/UI_AddNewEntry_Layout_PaymentMethodSection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:weightSum="100"
+        android:orientation="horizontal">
+        <userlayer.tools.AutoResizeTextView
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:textSize="22sp"
+            android:singleLine ="true"
+            android:gravity="right|center_vertical"
+            android:text="Payment:"
+        />
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            />
+        <LinearLayout
+            android:id="@+id/UI_AddNewEntry_Layout_PaymentMethodButton"
+            android:layout_width="0dp"
+            android:layout_weight="55"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:clickable="true">
+            <ImageView
+                android:id="@+id/UI_AddNewEntry_Image_PaymentMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_cash"
+                />
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:id="@+id/UI_AddNewEntry_Text_PaymentMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Cash"
+                android:textColor="@color/colorTextMain"
+                android:singleLine ="true"
+            />
+        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:drawableRight="@drawable/icon_expand"
+            android:id="@+id/UI_AddNewEntry_Text_PaymentMethodButtonSpinnerIcon"
+            android:clickable="true"
+        />
+        <Spinner
+            android:id="@+id/UI_AddNewEntry_Spinner_PaymentMethodSpinner"
+            android:layout_width="0dp"
+            android:layout_weight="0"
+            android:layout_height="match_parent"
+            android:dropDownWidth="wrap_content"
+
+        />
+    </LinearLayout>
+    <Space
+        android:id="@+id/UI_AddNewEntry_Space_SpaceBeforeComment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+    />
+
+    <userlayer.tools.AutoResizeTextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:textSize="22sp"
+        android:singleLine ="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Comment:"
+    />
+    <LinearLayout
+        android:id="@+id/UI_AddNewEntry_Layout_Comment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="18"
+        android:weightSum="100"
+        android:gravity="center_horizontal">
+        <EditText
+            android:id="@+id/UI_AddNewEntry_EditText_Comment"
+            android:inputType="textMultiLine"
+            android:layout_width="0dp"
+            android:layout_weight="90"
+            android:layout_gravity="top"
+            android:gravity="top"
+            android:maxLines="4"
+            android:minLines="1"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:maxLength="150"
+        />
+    </LinearLayout>
+    <Space
+        android:id="@+id/UI_AddNewEntry_Space_SpaceAfterComment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+    />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:weightSum="100">
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            />
+        <Button
+            android:id="@+id/UI_AddNewEntry_Button_Cancel"
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="match_parent"
+            android:drawableRight="@drawable/icon_cancel"
+            android:padding="25dp"
+            android:background="@drawable/button_left"
+            style="?android:attr/borderlessButtonStyle"
+        />
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:layout_height="match_parent"
+        />
+        <ImageButton
+            android:id="@+id/UI_AddNewEntry_Button_Delete"
+            android:layout_width="0dp"
+            android:layout_weight="17"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_delete"
+            android:background="@drawable/button_red"
+            style="?android:attr/borderlessButtonStyle"
+        />
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:layout_height="match_parent"
+            />
+
+        <Button
+            android:id="@+id/UI_AddNewEntry_Button_Confirm"
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/icon_check"
+            android:padding="25dp"
+            android:background="@drawable/button_right"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/menu_top">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/icon_home"
+            android:title="@string/menu_home"
+        />
+        <item
+            android:id="@+id/nav_addNewEntry"
+            android:icon="@drawable/icon_plus"
+            android:title="Add new entry"
+        />
+        <item
+            android:id="@+id/nav_listOfEntries"
+            android:icon="@drawable/icon_list"
+            android:title="List of entries"
+        />
+        <item
+            android:id="@+id/nav_recurringEntries"
+            android:icon="@drawable/icon_recurring"
+            android:title="Recurring entries"
+        />
+        <item
+            android:id="@+id/nav_graphicalOverview"
+            android:icon="@drawable/icon_chart"
+            android:title="Graphical overview"
+        />
+        <item
+            android:id="@+id/nav_send_pdf"
+            android:icon="@drawable/icon_download"
+            android:title="Create monthly report"
+        />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/menu_bottom">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/icon_settings"
+            android:title="Settings"
+        />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/icon_information"
+            android:title="About"
+        />
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/icon_exit"
+            android:title="Exit"
+        />
+    </group>
+</menu>

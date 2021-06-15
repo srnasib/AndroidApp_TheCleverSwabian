@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context="userlayer.fragments.FragmentGraphicalOverview"
+    android:background="@color/colorGreyBackground">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="This page will be filled\nin upcoming releases."
+        android:textSize="20sp"
+        android:textColor="@color/colorTextMain"
+        android:textStyle="bold"
+        />
+
+
+</LinearLayout>
+

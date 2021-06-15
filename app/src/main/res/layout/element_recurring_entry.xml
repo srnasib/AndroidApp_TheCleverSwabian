@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="91dp"
+    android:weightSum="100"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="@drawable/button_white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+        />
+
+        <userlayer.tools.AutoResizeTextView
+            android:id="@+id/UI_ElementRecurringEntry_Text_StartDate"
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:text="Start: 01.04.2019"
+            android:textSize="12sp"
+            android:singleLine ="true"
+            android:textColor="@color/colorTextMain"
+            android:gravity="bottom|left"
+        />
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+        />
+        <userlayer.tools.AutoResizeTextView
+            android:id="@+id/UI_ElementRecurringEntry_Text_Interval"
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:text="Interval: 1 Month"
+            android:textSize="12sp"
+            android:singleLine ="true"
+            android:textColor="@color/colorTextMain"
+            android:gravity="bottom|center_horizontal"
+        />
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+        />
+        <userlayer.tools.AutoResizeTextView
+            android:id="@+id/UI_ElementRecurringEntry_Text_EndDate"
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:text="End: 31.03.2019"
+            android:textSize="12sp"
+            android:singleLine ="true"
+            android:textColor="@color/colorTextMain"
+            android:gravity="bottom|right"
+            />
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="60">
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+        />
+        <userlayer.tools.AutoResizeTextView
+            android:id="@+id/UI_ElementRecurringEntry_Text_Title"
+            android:layout_width="0dp"
+            android:layout_weight="35"
+            android:layout_height="match_parent"
+            android:text="Rent for Wohnheim"
+            android:maxLines="3"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextMain"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+
+        />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="100">
+            <userlayer.tools.AutoResizeTextView
+                android:id="@+id/UI_ElementRecurringEntry_Text_Category"
+                android:layout_width="match_parent"
+                android:layout_weight="45"
+                android:layout_height="0dp"
+                android:text="Rent"
+                android:textSize="14sp"
+                android:singleLine ="true"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/icon_home"
+                android:scaleY="0.8"
+                android:scaleX="0.8"
+                android:textColor="@color/colorTextMain"
+                android:drawablePadding="5dp"
+                />
+            <userlayer.tools.AutoResizeTextView
+                android:id="@+id/UI_ElementRecurringEntry_Text_PaymentMethod"
+                android:layout_width="match_parent"
+                android:layout_weight="55"
+                android:layout_height="0dp"
+                android:text="Direct debit"
+                android:textSize="14sp"
+                android:singleLine ="true"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/icon_bank"
+                android:scaleY="0.8"
+                android:scaleX="0.8"
+                android:textColor="@color/colorTextMain"
+                android:drawablePadding="5dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="28"
+            android:layout_height="match_parent">
+            <userlayer.tools.AutoResizeTextView
+                android:id="@+id/UI_ElementRecurringEntry_Text_Amount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:singleLine ="true"
+                android:text="- 250.00 €"
+                android:textSize="20sp"
+                android:gravity="right|center_vertical"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextRed"
+            />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
